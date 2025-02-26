@@ -1,0 +1,50 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RonaldDuPreeJr_C971.TermDetails"
+             Title="Term Details">
+  <ScrollView>
+    <StackLayout Padding="20">
+        <!-- TERM DETAILS -->
+        <Label Text="{Binding Term.Title}" FontSize="28" TextDecorations="Underline" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,0,0,10"/>
+
+        <!-- TERM DATES -->
+        <StackLayout Orientation="Horizontal" Margin="0,5">
+            <Label Text="Start Date: " FontSize="Medium" FontAttributes="Bold"/>
+            <Label Text="{Binding Term.StartDate, StringFormat='{0:MM/dd/yyyy}'}" FontSize="Medium"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Margin="0,5">
+            <Label Text="End Date: " FontSize="Medium" FontAttributes="Bold"/>
+            <Label Text="{Binding Term.EndDate, StringFormat='{0:MM/dd/yyyy}'}" FontSize="Medium"/>
+        </StackLayout>
+
+        <!-- TERM COURSES -->
+        <CollectionView ItemsSource="{Binding Courses}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Margin="0,20">
+                        <!-- COURSE DETAILS -->
+                        <Entry Text="{Binding Title}" Placeholder="Course Title" FontSize="Medium" HorizontalOptions="FillAndExpand"/>
+                        <StackLayout Orientation="Horizontal" Margin="0,5">
+                            <Label Text="Start Date: " FontSize="14" Margin="0,10,0,0"/>
+                            <DatePicker Date="{Binding StartDate}" HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="0,5">
+                            <Label Text="End Date: " FontSize="14" Margin="0,10,0,0"/>
+                            <DatePicker Date="{Binding EndDate}" HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+
+                        <!-- COURSE ACTION BUTTONS -->
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,5">
+                            <Button Text="View Course" Clicked="ViewCourseClicked" CommandParameter="{Binding .}" Margin="0,0,10,0" />
+                            <Button Text="Delete Course" Clicked="DeleteCourseClicked" CommandParameter="{Binding .}" BackgroundColor="Maroon"/>
+                        </StackLayout>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- ADD COURSE -->
+        <Button Text="Add Course" Clicked="OnAddCourseClicked" Margin="0,20,0,10"/>
+    </StackLayout>
+    </ScrollView>
+</ContentPage>

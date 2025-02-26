@@ -1,0 +1,35 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RonaldDuPreeJr_C971.MainPage">
+<ScrollView>
+    <StackLayout Padding="20" Orientation="Vertical">
+
+        <Label Text="WGU TERMS" FontSize="32" HorizontalOptions="Center" Margin="0,0,0,10" FontAttributes="Bold" TextDecorations="Underline"/>
+
+        <CollectionView ItemsSource="{Binding Terms}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Margin="0,20">
+                        <Entry Text="{Binding Title}" Placeholder="Term Title" FontSize="21" HorizontalTextAlignment="Start"
+                               TextChanged="TermTitleUpdated"/>
+
+                        <StackLayout>
+                            <Label Text="Start Date" HorizontalOptions="Start" Margin="0,10,0,0"/>
+                            <DatePicker Date="{Binding StartDate}" DateSelected="TermStartDateUpdated" HorizontalOptions="FillAndExpand"/>
+                            <Label Text="End Date" HorizontalOptions="Start" Margin="0,10,0,0"/>
+                            <DatePicker Date="{Binding EndDate}" DateSelected="TermEndDateUpdated" HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                            <Button Text="View Term" Clicked="ViewTermClicked" CommandParameter="{Binding .}" Margin="0,0,10,0"/>
+                            <Button Text="Delete" Clicked="DeleteTermClicked" CommandParameter="{Binding .}" BackgroundColor="Maroon"/>
+                        </StackLayout>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button Text="Add Term" Clicked="OnAddTermClicked" Margin="0,40,0,10"/>
+    </StackLayout>
+</ScrollView>
+</ContentPage>

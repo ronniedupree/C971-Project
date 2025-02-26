@@ -1,0 +1,88 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RonaldDuPreeJr_C971.AssessmentDetails"
+             Title="Assessment Details">
+    <ScrollView>
+        <StackLayout Padding="10">
+            <Label Text="Assessment Details" FontSize="Large" HorizontalOptions="Center" Margin="0,0,0,10" FontAttributes="Bold" TextDecorations="Underline"/>
+            <CollectionView ItemsSource="{Binding Assessments}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Margin="0,5">
+                            <StackLayout Orientation="Horizontal" Margin="0,5">
+                                <Grid Margin="0,0,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="60" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Text="Type:" FontSize="Small" Grid.Column="0" Margin="0,10,0,0" FontAttributes="Bold"/>
+                                    <Picker x:Name="typePicker" SelectedItem="{Binding Type}" Grid.Column="1" SelectedIndexChanged="TypePickerSelectedIndexChanged">
+                                        <Picker.ItemsSource>
+                                            <x:Array Type="{x:Type x:String}">
+                                                <x:String>Performance Assessment</x:String>
+                                                <x:String>Objective Assessment</x:String>
+                                            </x:Array>
+                                        </Picker.ItemsSource>
+                                    </Picker>
+                                </Grid>
+                            </StackLayout>
+
+
+                            <Grid Margin="0,10,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="60" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="Name:" FontSize="Small" Grid.Column="0" Margin="0,10,0,0" FontAttributes="Bold"/>
+                                <Entry x:Name="assessmentNameEntry" Text="{Binding Name}" Grid.Column="1" Placeholder="Enter Assessment Name" FontSize="Small" TextChanged="AssessmentNameChanged"/>
+                            </Grid>
+
+
+                            <StackLayout Orientation="Vertical" Margin="0,10,0,0">
+                                <StackLayout>
+                                    <Grid Margin="0,0,0,0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="80" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Text="Start Date:" FontSize="Small" Grid.Column="0" Margin="0,10,0,0" FontAttributes="Bold"/>
+                                        <DatePicker x:Name="startDatePicker" Grid.Column="1" Date="{Binding StartDate}" DateSelected="AssessmentStartDateChanged"/>
+                                    </Grid>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Grid Margin="0,0,0,0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="80" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Text="End Date:" FontSize="Small" Grid.Column="0" Margin="0,10,0,0" FontAttributes="Bold"/>
+                                        <DatePicker x:Name="endDatePicker" Grid.Column="1" Date="{Binding EndDate}" DateSelected="AssessmentEndDateChanged"/>
+                                    </Grid>
+                                </StackLayout>
+                            </StackLayout>
+
+
+                             <StackLayout Orientation="Horizontal" Margin="0,15,0,0">
+                                <Label Text="Start Date Notification" VerticalOptions="Center" FontSize="Small" FontAttributes="Bold"/>
+                                <Switch Margin="10,0,0,0" x:Name="startDateNotificationSwitch" IsToggled="{Binding StartDateNotification}" Toggled="StartDateNotificationToggled"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Margin="0,0,0,0">
+                                <Label Text="End Date Notification" VerticalOptions="Center" FontSize="Small" FontAttributes="Bold"/>
+                                <Switch Margin="13,0,0,0" x:Name="endDateNotificationSwitch" IsToggled="{Binding EndDateNotification}" Toggled="EndDateNotificationToggled"/>
+                            </StackLayout>
+
+                            <Button Text="Delete Assessment" Clicked="DeleteAssessmentClicked" Margin="0,20,0,10" BackgroundColor="Maroon"/>
+
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Button Text="Add Assessment" Clicked="AddAssessmentClicked" HorizontalOptions="FillAndExpand" Margin="0,20,0,10"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

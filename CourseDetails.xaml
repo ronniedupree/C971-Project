@@ -1,0 +1,103 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RonaldDuPreeJr_C971.CourseDetails"
+             Title="Course Details">
+    <ScrollView>
+        <StackLayout Padding="10">
+            <Label Text="Course Details" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" TextDecorations="Underline"/>
+            <Label Text="Course Name" FontAttributes="Bold"/>
+            <Entry x:Name="courseTitle" Text="{Binding Course.Title}"/>
+
+            <!-- DATES -->
+            <Grid Margin="0,10,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Start Date:" Grid.Column="0" Margin="0,12,5,0" FontAttributes="Bold"/>
+                <DatePicker x:Name="courseStartDate" Date="{Binding Course.StartDate}" Grid.Column="1" Margin="5,0,0,0"/>
+            </Grid>
+
+            <Grid Margin="0,5,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="End Date:" Grid.Column="0" Margin="0,12,5,0" FontAttributes="Bold"/>
+                <DatePicker x:Name="courseEndDate" Date="{Binding Course.EndDate}" Grid.Column="1" Margin="5,0,0,0"/>
+            </Grid>
+
+            <!-- START DATE NOTIFICATIONS -->
+            <StackLayout Orientation="Horizontal" Margin="0,0,0,0">
+                <Grid Margin="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="160" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Start Date Notification" Grid.Column="0" VerticalOptions="Center" FontAttributes="Bold"/>
+                    <Switch x:Name="startDateNotifications" Grid.Column="1" IsToggled="{Binding StartDateNotification}" Toggled="StartDateNotificationsToggled" />
+                </Grid>
+            </StackLayout>
+
+            <!-- END DATE NOTIFICATIONS -->
+            <StackLayout Orientation="Horizontal" Margin="0,0,0,0">
+                <Grid Margin="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="160" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="End Date Notification" Grid.Column="0" VerticalOptions="Center" FontAttributes="Bold"/>
+                    <Switch x:Name="endDateNotifications" Grid.Column="1" IsToggled="{Binding EndDateNotification}" Toggled="EndDateNotificationsToggled" />
+                </Grid>
+            </StackLayout>
+
+
+            <Label Text="Status" Margin="0,10,0,0" FontAttributes="Bold"/>
+            <Picker x:Name="statusSelection" ItemsSource="{Binding StatusOptions}" SelectedItem="{Binding SelectedStatus}" SelectedIndexChanged="StatusSelectionChanged"/>
+
+            <Label Text="Instructor Name" Margin="0,10,0,0" FontAttributes="Bold"/>
+            <Entry x:Name="instructorName" Text="{Binding Course.InstructorName}"/>
+
+            <Label Text="Instructor Phone" Margin="0,10,0,0" FontAttributes="Bold"/>
+            <Entry x:Name="instructorPhone" Text="{Binding Course.InstructorPhone}"/>
+
+            <Label Text="Instructor Email" Margin="0,10,0,0" FontAttributes="Bold"/>
+            <Entry x:Name="instructorEmail" Text="{Binding Course.InstructorEmail}"/>
+
+            <Label Text="Notes" Margin="0,10,0,0" FontAttributes="Bold"/>
+            <Editor x:Name="notes" Text="{Binding Course.Notes}" AutoSize="TextChanges"/>
+
+            <Grid Margin="0,10,0,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- VIEW BUTTON -->
+                <Label Text="Assessments" FontSize="Medium" HorizontalOptions="Center" FontAttributes="Bold"/>
+                <Button Text="View Assessments" Clicked="OnAssessmentClicked" HorizontalOptions="FillAndExpand" Grid.Column="0" Margin="0,0,5,0"/>
+
+                <!-- SHARE BUTTON -->
+                <Button Text="Share Notes" Clicked="OnShareNotesClicked" HorizontalOptions="FillAndExpand" Grid.Column="1" Margin="5,0,0,0" BackgroundColor="Peru"/>
+            </Grid>
+
+            <!-- Save Button -->
+            <Button Text="Save" Clicked="OnSaveClicked" HorizontalOptions="FillAndExpand" Margin="0,0,0,10"/>
+
+            <CollectionView ItemsSource="{Binding Course.Assessments}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label Text="{Binding Name}" FontAttributes="Bold"/>
+                            <Label Text="{Binding DueDate, StringFormat='Due Date: {0:d}'}"/>
+                            <Label Text="{Binding Type}"/>
+                            <Button Text="Edit" Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.EditAssessmentCommand}" CommandParameter="{Binding .}"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

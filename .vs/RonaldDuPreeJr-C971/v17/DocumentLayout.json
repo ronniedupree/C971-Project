@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\RonaldDuPreeJr-C971\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D34D1814-ACCC-4670-BB1C-B1471AB47860}|RonaldDuPreeJr-C971.csproj|c:\\ronalddupreejr-c971\\platforms\\android\\resources\\values\\colors.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{D34D1814-ACCC-4670-BB1C-B1471AB47860}|RonaldDuPreeJr-C971.csproj|solutionrelative:platforms\\android\\resources\\values\\colors.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D34D1814-ACCC-4670-BB1C-B1471AB47860}|RonaldDuPreeJr-C971.csproj|c:\\ronalddupreejr-c971\\resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D34D1814-ACCC-4670-BB1C-B1471AB47860}|RonaldDuPreeJr-C971.csproj|solutionrelative:resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D34D1814-ACCC-4670-BB1C-B1471AB47860}|RonaldDuPreeJr-C971.csproj|c:\\ronalddupreejr-c971\\resources\\styles\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D34D1814-ACCC-4670-BB1C-B1471AB47860}|RonaldDuPreeJr-C971.csproj|solutionrelative:resources\\styles\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D34D1814-ACCC-4670-BB1C-B1471AB47860}|RonaldDuPreeJr-C971.csproj|c:\\ronalddupreejr-c971\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D34D1814-ACCC-4670-BB1C-B1471AB47860}|RonaldDuPreeJr-C971.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D34D1814-ACCC-4670-BB1C-B1471AB47860}|RonaldDuPreeJr-C971.csproj|c:\\ronalddupreejr-c971\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D34D1814-ACCC-4670-BB1C-B1471AB47860}|RonaldDuPreeJr-C971.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D34D1814-ACCC-4670-BB1C-B1471AB47860}|RonaldDuPreeJr-C971.csproj|c:\\ronalddupreejr-c971\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D34D1814-ACCC-4670-BB1C-B1471AB47860}|RonaldDuPreeJr-C971.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D34D1814-ACCC-4670-BB1C-B1471AB47860}|RonaldDuPreeJr-C971.csproj|c:\\ronalddupreejr-c971\\models\\assessment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D34D1814-ACCC-4670-BB1C-B1471AB47860}|RonaldDuPreeJr-C971.csproj|solutionrelative:models\\assessment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "colors.xml",
+              "DocumentMoniker": "C:\\RonaldDuPreeJr-C971\\Platforms\\Android\\Resources\\values\\colors.xml",
+              "RelativeDocumentMoniker": "Platforms\\Android\\Resources\\values\\colors.xml",
+              "ToolTip": "C:\\RonaldDuPreeJr-C971\\Platforms\\Android\\Resources\\values\\colors.xml",
+              "RelativeToolTip": "Platforms\\Android\\Resources\\values\\colors.xml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2024-06-19T10:00:16.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Styles.xaml",
+              "DocumentMoniker": "C:\\RonaldDuPreeJr-C971\\Resources\\Styles\\Styles.xaml",
+              "RelativeDocumentMoniker": "Resources\\Styles\\Styles.xaml",
+              "ToolTip": "C:\\RonaldDuPreeJr-C971\\Resources\\Styles\\Styles.xaml",
+              "RelativeToolTip": "Resources\\Styles\\Styles.xaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-19T09:59:35.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Colors.xaml",
+              "DocumentMoniker": "C:\\RonaldDuPreeJr-C971\\Resources\\Styles\\Colors.xaml",
+              "RelativeDocumentMoniker": "Resources\\Styles\\Colors.xaml",
+              "ToolTip": "C:\\RonaldDuPreeJr-C971\\Resources\\Styles\\Colors.xaml",
+              "RelativeToolTip": "Resources\\Styles\\Colors.xaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-19T09:59:33.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\RonaldDuPreeJr-C971\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "MauiProgram.cs",
+              "ToolTip": "C:\\RonaldDuPreeJr-C971\\MauiProgram.cs",
+              "RelativeToolTip": "MauiProgram.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T09:56:09.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\RonaldDuPreeJr-C971\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "C:\\RonaldDuPreeJr-C971\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T09:55:08.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\RonaldDuPreeJr-C971\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "C:\\RonaldDuPreeJr-C971\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-19T09:55:03.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Assessment.cs",
+              "DocumentMoniker": "C:\\RonaldDuPreeJr-C971\\Models\\Assessment.cs",
+              "RelativeDocumentMoniker": "Models\\Assessment.cs",
+              "ToolTip": "C:\\RonaldDuPreeJr-C971\\Models\\Assessment.cs",
+              "RelativeToolTip": "Models\\Assessment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T09:53:05.442Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
